@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "Hugo Ivy"
-theme = "hugo-ivy"
+theme = "hugo-ivish"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
