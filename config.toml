@@ -1,0 +1,44 @@
+baseurl = "/"
+languageCode = "zh"
+title = "HuXufeng"
+theme = "hugo-ivy"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 1
+[[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 2
+[[menu.main]]
+    name = "分类"
+    url = "/categories/"
+    weight = 3
+[[menu.main]]
+    name = "Wordpress"
+    url = "https://www.huxufeng.space"
+    weight = 4
+[[menu.main]]
+    name = "Twitter"
+    weight = 5
+    url = "https://twitter.com/huxufeng0120"
+
+[params]
+    description = "an idle person"
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.12.0"
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    MathJaxVersion = "2.7.5"
+
+
