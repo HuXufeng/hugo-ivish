@@ -1,7 +1,7 @@
 name = "Ivish"
 license = "Unlicense"
 licenselink = "https://github.com/yihui/hugo-ivy/blob/master/LICENSE.md"
-description = "A theme ported from Ivy"
+description = "A theme adopted from hugo-ivy"
 homepage = "https://ivy.yihui.name"
 tags = ["minimal", "blog", "personal", "clean", "simple", "minimalist"]
 features = ["blog"]
