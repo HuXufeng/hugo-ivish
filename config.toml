@@ -21,8 +21,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "分类"
     url = "/categories/"
     weight = 3
-
-
+[[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 6
 [params]
     description = "an idle person"
     # options for highlight.js (version, additional languages, and theme)
