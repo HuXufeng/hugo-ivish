@@ -1,6 +1,7 @@
 /* Micro Reset */
 
 html {
+  background-color: rgba(248, 248, 248, 0.452);
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -37,7 +38,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
-  margin: 60px 0 30px;
   line-height: 1.25;
   text-align: center;
 }
@@ -90,7 +90,7 @@ pre code {
 /* Lists */
 
 ul, ol {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 0px;
 }
 
 li {
@@ -179,12 +179,9 @@ body {
 
 
 .main {
-  width: 700px;
-  padding: 32px 10px 20px 50px;
-  margin-left: 260px;
   border-left: 3px solid #94bbbb;
   min-height: calc(100vh - 60px);
-  
+
 }
 
 /* Masthead */
@@ -193,7 +190,7 @@ body {
   margin-top: 0;
   margin-bottom: 34px;
   padding: 0;
-  text-align: right;
+  text-align: center;
   font-size: 46px;
   line-height: 58px;
 }
@@ -202,17 +199,18 @@ body {
   border-bottom: none;
 }
 .masthead {
-  width: 260px;
-  padding: 20px 50px 20px 10px;
-  float: left;
-  position: -webkit-sticky;
-  position: sticky;
+  text-align: center;
+  padding: 10px 0px 50px 10px;
+  /*float: left;*/
+
   top:10px;
 }
 
 .masthead .tagline {
-  font-style: italic;
-  text-align: right;
+  font-size: 1.618em;
+  color: #ffffff;
+  background-color: #2b2b2b;
+  text-align: center;
 }
 
 .masthead .menu {
@@ -243,7 +241,9 @@ body {
 }
 
 /* Main */
-
+.main{
+  margin-right: 0% !important;
+}
 .main .title h1 {
   margin-top: 0;
   margin-bottom: 40px;
@@ -339,10 +339,12 @@ thead, tfoot, tr:nth-child(even) {
   }
 
   .main {
-    width: auto;
-    padding: 40px 10px;
+ 
+      margin-right: 0% !important;
+  
+  width: auto;
     margin-left: 0;
-    border-left: none;
+  
     min-height: auto;
   }
 

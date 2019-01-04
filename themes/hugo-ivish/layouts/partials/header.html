@@ -55,7 +55,6 @@
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
     
     <header class="masthead">
-      <img class="custom.logo" src="{{ "image/logo.jpg" | relURL }}" style="border-radius: 5px ;box-shadow: 1px 1px 5px" >
       {{ partial "tagline.html" . }}
       {{ partial "menu.html" . }}
     </header>

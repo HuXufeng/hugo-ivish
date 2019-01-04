@@ -5,11 +5,11 @@
     <span class="icon open-icon">☰</span>
     <span class="text">Menu</span>
   </label>
-  <ul>
+  <div>
   {{ $currentPage := . }}
   {{ range (default .Site.Menus.main (index .Site.Menus ($.Scratch.Get "section"))) }}
-  <li{{ if eq .URL $currentPage.URL }} class="active"{{ end }}><a href="{{ .URL }}">{{ .Name }}</a></li>
+  <span {{ if eq .URL $currentPage.URL }} class="active"{{ end }}><a href="{{ .URL }}">[{{ .Name }}]</a></span>
   {{ end }}
   {{ partial "menu_extra.html" . }}
-  </ul>
+  </div>
 </nav>
