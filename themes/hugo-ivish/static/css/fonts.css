@@ -1,6 +1,6 @@
 @font-face{
-  font-family: 'Source Han Sans CN';
-  src:local('Source Han Sans CN'), url(../static/fonts/SourceHanSansCN/SourceHanSansCN-Regular.otf) format('opentype');
+  font-family: 'Source Han Serif CN';
+  src:local('Source Han Serif CN'), url("{{ .Site.Baseurl }}/static/fonts/SourceSerifCN/SourceSerifCN-Regular.otf") format('opentype');
 }
 code {
   font-family: "Lucida Console", 'Andale Mono', 'STKaiti', 'KaiTi', 'SimKai', monospace;
@@ -9,6 +9,5 @@ pre code {
   font-family: Consolas, "Lucida Console", Monaco, 'STKaiti', 'KaiTi', 'SimKai', monospace;
 }
 body{
-  text-align: center;
-  font-family: 'Source Han Sans CN';
+  font-family: 'Source Han Serif CN';
 }
