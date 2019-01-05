@@ -41,7 +41,7 @@
     {{ if .Keywords }}
     <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
     {{ end }}
-    <link href="{{ "/js/type.js" | relURL }}" /> 
+   
     {{ if .RSSLink }}
     <link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
