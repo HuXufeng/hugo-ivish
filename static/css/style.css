@@ -1,7 +1,6 @@
 /* Micro Reset */
 
 html {
-  background-color: rgba(248, 248, 248, 0.452);
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -13,6 +12,7 @@ html {
 }
 
 body {
+  background-color: #f8f8f5;
   margin: 0;
   padding: 0;
 }
@@ -34,18 +34,59 @@ img {
 
 body {
   line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1.25;
-  text-align: center;
+  text-shadow: 0px 0px 0.314px;
 }
-.masthead>h1{
-width: fit-content;
-border-width: 1px 1px 1px 1px;
-border-style:solid;
+
+h1 a {
+	padding: 10px 20px;
 }
+
+h1 a::before,
+h1 a::after  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #25455c;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+h1 a::after  {
+	border-color: #218ca7;
+	opacity: 0;
+	-webkit-transform: translateY(-7px) translateX(6px);
+	-moz-transform: translateY(-7px) translateX(6px);
+	transform: translateY(-7px) translateX(6px);
+}
+
+h1 a:hover::before,
+h1 a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(5px) translateX(-5px);
+	-moz-transform: translateY(5px) translateX(-5px);
+	transform: translateY(5px) translateX(-5px);
+}
+
+h1 a:hover::after,
+h1 a:focus::after  {
+  color: #9c0e0e;
+  opacity: 1;
+	-webkit-transform: translateY(0px) translateX(0px);
+	-moz-transform: translateY(0px) translateX(0px);
+	transform: translateY(0px) translateX(0px);
+}
+
 h1 {
   font-size: 32px;
   font-weight: normal;
@@ -107,13 +148,19 @@ ul, ol {
 
 li {
   margin: 4px 0;
-  padding: 0;
+  padding: 0px;
   list-style-type:none;
 }
 li:hover{
   box-shadow: 0 0 0.1px 0.1px;
+  margin-left:10px;
   transition:0.2s;
 }
+li a:visited{
+  text-decoration: line-through;
+}
+
+
 /* Links */
 a {
   display: inline-block;
@@ -123,33 +170,88 @@ a {
   position: relative;
   padding-bottom: 2px;
   border-bottom: 1px;
+} 
+.menu a {
+	margin: 0 1%;
+  display: inline-block;
 }
 
-a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.15s ease-in-out 0s;
-  background-color: #333;
+.menu a::before,
+.menu a::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #333333;
+	content: '';
+	opacity: 0.2;
+	-webkit-transition: opacity 0.3s, height 0.3s;
+	-moz-transition: opacity 0.3s, height 0.3s;
+	transition: opacity 0.3s, height 0.3s;
 }
 
-a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+.menu a::after {
+	top: 100%;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
 }
-a:hover:after {
-  width: 100%;
+
+.menu a span:first-child {
+	z-index: 2;
+	display: block;
+	font-weight: 300;
+}
+
+.menu a span:last-child {
+	z-index: 1;
+	display: block;
+	text-shadow: none;
+	text-transform: none;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.menu a:hover::before,
+.menu a:focus::before {
+	height: 6px;
+}
+
+.menu a:hover::before,
+.menu a:hover::after,
+.menu a:focus::before,
+.menu a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.menu a:hover span:last-child,
+.menu a:focus span:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
 }
 
 
+
+/*terms*/
+.terms>li{
+  display: inline-table;
+  padding: 5px;
+}
 /* Miscellanea */
 
 hr {
@@ -211,7 +313,7 @@ body {
 }
 .masthead {
   text-align: center;
-  padding: 10px 0px 50px 0px;
+  padding: 10px 0px 20px 0px;
   /*float: left;*/
 
   top:10px;
@@ -221,7 +323,10 @@ body {
   font-size: 1.618em;
   color: #ffffff;
   background-color: #333;
-  text-align: center;
+  background-size: auto;
+  width: 60%;
+  margin:auto;
+  margin-bottom: 20px;
 }
 
 .masthead .menu {
@@ -231,6 +336,7 @@ body {
 
 .masthead .menu a {
   direction: ltr;
+  padding: 10px 20px;
 }
 
 .masthead .menu ul ul {
@@ -343,10 +449,6 @@ thead, tfoot, tr:nth-child(even) {
   }
 
   .masthead {
-    width: auto;
-    float: none;
-    padding: 20px 0 30px;
-    text-align: center;
     margin-left: 10px;
     margin-right: 10px;
     border-bottom: 3px solid black;
@@ -371,53 +473,8 @@ thead, tfoot, tr:nth-child(even) {
     text-align: center;
   }
 
-  .masthead .menu {
-    direction: ltr;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .masthead .menu ul {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-  }
-
-  .masthead .menu ul ul {
-    margin: 0;
-  }
-
-  .masthead .menu li {
-    border-bottom: 1px solid;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .masthead .menu li:first-child {
-    border-top: 1px solid;
-  }
-
-  .masthead .menu li li:last-child {
-    border-bottom: none;
-  }
-
-  .masthead .menu a {
-    display: inline-block;
-    padding: 15px 20px;
-    border-bottom: none;
-  }
-
-  .masthead .menu li li a {
-    padding-left: 30px;
-  }
-
-  .masthead .menu li li::before {
-    content: none;
-  }
-
-  .masthead .menu li li a::before {
-    content: "•\00a0\00a0\00a0";
+  .masthead .menu{
+    margin: 0 0 0 -1px;
   }
 
 
@@ -427,6 +484,7 @@ thead, tfoot, tr:nth-child(even) {
 
 @media screen and (max-width: 720px) {
 }
+
 
 /* Portrait phone screens */
 
@@ -455,5 +513,5 @@ thead, tfoot, tr:nth-child(even) {
   .masthead {
     padding-top: 0;
   }
-
+  
 }
