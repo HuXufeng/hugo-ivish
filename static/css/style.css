@@ -245,7 +245,9 @@ a {
 	transform: translateY(0%);
 }
 
-
+.menu .active a {
+  box-shadow: #333333 0px 0px 10px 0.1px;
+}
 
 /*terms*/
 .terms>li{

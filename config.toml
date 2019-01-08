@@ -1,7 +1,6 @@
 baseurl = "/"
-languageCode = "zh"
+languageCode = "zh-CN"
 title = "HUXUFENG"
-theme = "hugo-ivish"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
