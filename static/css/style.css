@@ -41,11 +41,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1.25;
-  text-shadow: 0px 0px 0.314px;
 }
 
 h1 a {
-	padding: 10px 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: #333333;
 }
 
 h1 a::before,
@@ -188,7 +189,7 @@ a {
 	opacity: 0.2;
 	-webkit-transition: opacity 0.3s, height 0.3s;
 	-moz-transition: opacity 0.3s, height 0.3s;
-	transition: opacity 0.3s, height 0.3s;
+  transition: opacity 0.3s, height 0.3s;
 }
 
 .menu a::after {
@@ -245,8 +246,9 @@ a {
 	transform: translateY(0%);
 }
 
-.menu .active a {
-  box-shadow: #333333 0px 0px 10px 0.1px;
+.menu .active a::before {
+  height: 6px;
+  opacity: 1;
 }
 
 /*terms*/
@@ -411,7 +413,12 @@ thead, tfoot, tr:nth-child(even) {
 /**
  * Utility Styles
  */
-
+#scroll-indicator{
+  width: 0%;
+  background: #333333;
+  height: 2.14px;
+  position: sticky;
+}
 .unselectable {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -453,7 +460,6 @@ thead, tfoot, tr:nth-child(even) {
   .masthead {
     margin-left: 10px;
     margin-right: 10px;
-    border-bottom: 3px solid black;
     position: relative;
   }
 

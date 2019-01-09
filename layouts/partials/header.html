@@ -47,19 +47,17 @@
     {{ end }}
     {{ partial "head_highlightjs" . }}
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-        
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
   </head>
 
   {{ $.Scratch.Set "section" (replaceRE "^/([^/]+)/.*" "$1" .URL) }}
   <body class="{{ if .IsHome }}home{{ else }}{{ $.Scratch.Get "section" }}{{ end }}">
-    
+  
     <header class="masthead">
       {{ partial "tagline.html" . }}
       {{ partial "menu.html" . }}
     </header>
-
     <article class="main">
       <header class="title">
       {{ partial "meta.html" . }}

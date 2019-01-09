@@ -2,7 +2,7 @@
 author: huxufeng
 date: 2018-10-04 08:57:59+00:00
 draft: false
-title: 终于把网站从http迁移了https
+title: 网站从http迁移了https
 type: post
 url: /239/
 categories:
