@@ -11,5 +11,5 @@
       // no need to load TypeKit if Source Hans Serif has been installed
       if (context.measureText(text).width != size) return;
     }
-    var link = document.createElement("link");link.setAttribute("rel"="stylesheet");link.setAttribute("href","https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700");document.getElementsByTagName("head")[0].appendChild(link);
+    var link = document.createElement("link");link.rel="stylesheet";link.href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700";document.getElementsByTagName("head")[0].appendChild(link);
   })(document);
